@@ -18,13 +18,13 @@
                 <a href="{{route('register')}}" class="btn btn-primary btn-sm">Continue <i class="fa fa-arrow-right"></i></a>
             </div>
         </div>
-        <div class="row mb-4">
+        {{-- <div class="row mb-4">
             <div class="col-sm-1">
                 
             </div>
             <div class="col-sm-6">
                 <span>Registered alumni already? Click <a href="{{route('login')}}">here.</a></span>
             </div>
-        </div>
+        </div> --}}
 </div>
 @endsection

@@ -19,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+Route::post('/alumni', 'RegistrationController@register')->name('alumni.register');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -26,7 +27,6 @@ Route::get('/alumni/confirmed', function(){
 	return view('vendor/multiauth/admin/confirmed');
 })->name('admin.confirm');
 
-Route::post('/alumni/register', 'RegistrationController@register')->name('alumni.register');
 
 Route::get('/home/alumni/{id}/edit', 'RegistrationController@edit')->name('alumni.edit');
 Route::get('/admin/home/{id}/', 'RegistrationController@update')->name('alumni.update');

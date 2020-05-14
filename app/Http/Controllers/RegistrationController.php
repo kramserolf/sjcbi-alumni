@@ -22,12 +22,6 @@ class RegistrationController extends Controller
     	        'emp_status' => 'required',
     	        'job_search' => 'required',
     	    ]);
-        $name = $request->name;
-        if (User::where('name', $name)->exists()) {
-            Alert::error('Error', 'Name is already registered');
-            return redirect()->back()->withInput();
-        }
-        else{
             User::create([
                 'name' => $request->name,
                 'gender' => $request->gender,
@@ -58,7 +52,6 @@ class RegistrationController extends Controller
             ]);
             Alert::success('Success', 'Thank you for your time.');
           return redirect()->route('welcome');
-        }
     }
     public function edit($id){
         $alumni = User::find($id);

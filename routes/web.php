@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::post('/alumni', 'RegistrationController@register')->name('alumni.register');
+Route::post('/alumni/register', 'RegistrationController@register')->name('alumni.register');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

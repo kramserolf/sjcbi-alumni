@@ -7,7 +7,6 @@
                 <h4>ALUMNI TRACKING and SURVEY FORM</h4><br>
                 <p>Dear Alumna/Alumnus,</p>
                 <p>The St. Joseph's College of Baggao Inc. family would like to get information about your work life after graduation and feedback about the quality of education you received from us. We would like to strengthen our ties with you and involved you in the activities of the Institution. May we then request that you accomplish this survey form? The data and information you will write will be very valuable for our current tracer study and other program we are conceptualizing especially in the research and outreach areas.</p>
-                <p>After accomplishing the form, you will be redirected to another page where you can view other alumni information, and update your information if necessary.</p>
                 <p>Thank you.</p>
                 <p>SJCBI Management</p>
             </div>

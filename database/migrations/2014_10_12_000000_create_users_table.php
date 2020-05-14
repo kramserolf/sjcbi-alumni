@@ -41,10 +41,7 @@ class CreateUsersTable extends Migration
             $table->string('doctors_year')->nullable();
             $table->text('seminars')->nullable();;
             $table->string('certificates')->nullable();
-            $table->string('email')->unique();
-            $table->string('password');
             $table->string('alumni_status')->default('pending');
-            $table->rememberToken();
             $table->timestamps();
         });
     }

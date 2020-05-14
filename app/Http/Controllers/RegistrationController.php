@@ -16,17 +16,15 @@ class RegistrationController extends Controller
 
     	$validatedData = $request->validate([
     			'name' => 'required|string|min:4',
-    	        'email' => 'email|required|min:6',
     	        'gender' => 'required',
     	        'degree' => 'required|string|min:4',
     	        'year' => 'required',
     	        'emp_status' => 'required',
     	        'job_search' => 'required',
-    	        'password' => 'required|min:8|'
     	    ]);
-        $email = $request->email;
-        if (User::where('email', $email)->exists()) {
-            Alert::error('Error', 'Email is already registered');
+        $name = $request->name;
+        if (User::where('name', $name)->exists()) {
+            Alert::error('Error', 'Name is already registered');
             return redirect()->back()->withInput();
         }
         else{
@@ -56,11 +54,9 @@ class RegistrationController extends Controller
                 'doctors_degree' => $request->doctors_degree,
                 'doctors_year' => $request->doctors_year,
                 'seminars' => $request->seminars,
-                'certificates' => $request->certificates,
-                'email' => $request->email,
-                'password' => Hash::make($request->password)
+                'certificates' => $request->certificates
             ]);
-            Alert::success('Success', 'Thank you for registering.');
+            Alert::success('Success', 'Thank you for your time.');
           return redirect()->route('welcome');
         }
     }

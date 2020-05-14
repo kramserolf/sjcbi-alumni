@@ -242,21 +242,6 @@
                 </div>
             </div>
         </div>
-        <div class="border-bottom pt-3 mb-4">
-            <h4 class="text-monospace">Create Account</h4>
-            <div class="form-group row">
-                <div class="col-sm-12">
-                    <label>Email</label>
-                    <input id="email" type="email" class="form-control" name="email" value="{{old('email')}}" required >
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-12">
-                    <label>Password</label>
-                    <input id="password" type="password" class="form-control" name="password" required>
-                </div>
-            </div>
-        </div>
         <div class="row justify-content-center mt-3 mb-3">
             <div class="col-sm-6 text-center">
                 <input type="submit" name="submit" class="btn btn-primary btn-block" value="Submit">

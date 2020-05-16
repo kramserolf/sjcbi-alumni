@@ -9,7 +9,7 @@
     <ul class="nav justify-content-center mb-3">
       <li class="nav-item">
         <a class="nav-link" href="{{route('welcome')}}">
-            <img src="{{secure_asset('images/sjclogo.png')}}" alt="SJCBI Logo" width="90" height="80">
+            <img src="{{asset('images/sjclogo.png')}}" alt="SJCBI Logo" width="90" height="80">
         </a>
       </li>
     </ul>

@@ -30,16 +30,11 @@
             <div class="form-group row">
                 <div class="col-sm-4">
                     <label>Gender</label>
-                    <div class="row justify-content-start pt-1">
-                        <div class="custom-control custom-radio ml-4">
-                          <input type="radio" id="gendermale" name="gender" class="custom-control-input" required>
-                          <label class="custom-control-label" for="gendermale">Male</label>
-                        </div>
-                        <div class="custom-control custom-radio ml-4">
-                          <input type="radio" id="genderfemale" name="gender" class="custom-control-input" required>
-                          <label class="custom-control-label" for="genderfemale">Female</label>
-                        </div>
-                    </div>
+                    <select class="custom-select" name="gender" id="gender">
+                        <option selected></option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
                 </div>
                 <div class="col-sm-3">
                     
@@ -97,16 +92,11 @@
                 </div>
                 <div class="col-sm-5">
                     <label>Status</label>
-                    <div class="row justify-content-start pt-1">
-                        <div class="custom-control custom-radio ml-4">
-                          <input type="radio" id="full_time" name="part_time" class="custom-control-input">
-                          <label class="custom-control-label" for="full_time">Full-time</label>
-                        </div>
-                        <div class="custom-control custom-radio ml-4">
-                          <input type="radio" id="part_time" name="part_time" class="custom-control-input">
-                          <label class="custom-control-label" for="part_time">Part-time</label>
-                        </div>
-                    </div>
+                    <select class="custom-select" name="part_time" id="part_time">
+                        <option selected></option>
+                        <option value="Full-time">Full-time</option>
+                        <option value="Part-time">Part-time</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group row">
@@ -134,37 +124,29 @@
                 </div>
                 <div class="col-sm-4">
                     <label>Type of Company</label>
-                    <div class="row justify-content-start pt-1">
-                        <div class="custom-control custom-radio ml-4">
-                          <input type="radio" id="local" name="comp_type" class="custom-control-input">
-                          <label class="custom-control-label" for="local">Local</label>
-                        </div>
-                        <div class="custom-control custom-radio ml-4">
-                          <input type="radio" id="national" name="comp_type" class="custom-control-input">
-                          <label class="custom-control-label" for="national">National</label>
-                        </div>
-                    </div>
+                    <select class="custom-select" name="comp_type" id="comp_type">
+                        <option selected></option>
+                        <option value="Local">Local</option>
+                        <option value="National">National</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-5">
-                    <label>Private</label>
-                    <div class="row justify-content-start pt-1">
-                        <div class="custom-control custom-radio ml-4">
-                          <input type="radio" id="government" name="private" class="custom-control-input">
-                          <label class="custom-control-label" for="government">Government</label>
-                        </div>
-                        <div class="custom-control custom-radio ml-4">
-                          <input type="radio" id="private" name="private" class="custom-control-input">
-                          <label class="custom-control-label" for="private">Private</label>
-                        </div>
-                    </div>
-                </div><div class="col-sm-1">
+                    <label>Government Type</label>
+                    <select class="custom-select" name="private" id="private">
+                        <option selected></option>
+                        <option value="Government">Government</option>
+                        <option value="Private">Private</option>
+                    </select>
+                    
+                </div>
+                <div class="col-sm-1">
                     
                 </div>
                 <div class="col-sm-6">
                     <label>Length of Job Search</label>.
-                    <select class="custom-select" name="job_search">
+                    <select class="custom-select" name="job_search" id="job_search">
                       <option selected>{{old('job_search')}}</option>
                       <option value="0 to 6 Months">0 to 6 Months</option>
                       <option value="6 to 12 months">6 to 12 months</option>
@@ -205,6 +187,10 @@
                     <label>Facilities & Resources</label>
                     <select class="custom-select" name="facilities">
                         <option selected></option>
+                        <option value="Library / Books">Library / Books</option>
+                        <option value="Internet">Internet</option>
+                        <option value="Colleagues">Colleagues</option>
+                        <option value="Laboratories">Laboratories</option>
                     </select>
                 </div>
             </div>

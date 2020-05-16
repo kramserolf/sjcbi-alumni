@@ -1,7 +1,7 @@
 <?php
-if (App::environment('production')) {
-    URL::forceScheme('https');
-}
+// if (App::environment('production')) {
+//     URL::forceScheme('https');
+// }
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +27,21 @@ Route::get('/alumni/confirmed', function(){
 	return view('vendor/multiauth/admin/confirmed');
 })->name('admin.confirm');
 
+// delete alumni
+Route::get('/admin/alumni/{user}', function($id){
+	$data = App\User::findOrFail($id);
+	$data->delete();
+		return response()->json([
+	        'success' => 'Successfully deleted.'
+	]);
+		return view('vendor.multiauth.admin.home');
+});
 
-Route::get('/home/alumni/{id}/edit', 'RegistrationController@edit')->name('alumni.edit');
+Route::get('/admin/home/{user}/edit', function($id){
+	$data = App\User::findOrFail($id);
+	return response()->json(['result' => $data]);
+});
+
+// Route::get('/home/alumni/{id}/edit', 'RegistrationController@edit')->name('alumni.edit');
 Route::get('/admin/home/{id}/', 'RegistrationController@update')->name('alumni.update');
+
